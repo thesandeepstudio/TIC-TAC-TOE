@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F5F5F5;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.game {
+    text-align: center;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    color: #0F4B5F;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 0; /* Ensure no gap between cells */
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: 2px solid #0F4B5F; /* Consistent border */
+    box-sizing: border-box; /* Include border in width/height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-bottom: 2px solid #0F4B5F;
+}
+
+.cell:nth-child(4),
+.cell:nth-child(5),
+.cell:nth-child(6) {
+    border-top: 2px solid #0F4B5F;
+    border-bottom: 2px solid #0F4B5F;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-top: 2px solid #0F4B5F;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-right: 2px solid #0F4B5F;
+}
+
+.cell:nth-child(2),
+.cell:nth-child(5),
+.cell:nth-child(8) {
+    border-right: 2px solid #0F4B5F;
+    border-left: 2px solid #0F4B5F;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:nth-child(9) {
+    border-left: 2px solid #0F4B5F;
+}
+
+.cell.x {
+    color: #FF6347; /* Example color for X */
+}
+
+.cell.o {
+    color: #36AED2; /* Color for O */
+}
+
+.info {
+    font-size: 1.2em;
+    color: #0F4B5F;
+    margin-bottom: 20px;
+}
